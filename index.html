@@ -1,17 +1,225 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <title>HTML5 Template</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Ezequiel Migueles" />
+    <link rel="stylesheet" href="./styles.css" />
+    <script defer src="./scripts.js"></script>
+    <title>The Legend Of Zelda Quiz</title>
+  </head>
 
-    <meta name="author" content="TheBridge">
-    <meta name="description" content="Plantilla simple HTML5">
+  <body>
+    <form class="zeldaform" name="zelda">
+      <!-- Primera Pregunta -->
+      <fieldset class="questwrap">
+        <legend class="questtitle">
+          Pregunta 1: <br> ¿Quiénes son los directores del primer The Legend of Zelda?
+        </legend>
+        <label class="label1" for="director1-field"
+          >Shigeru Miyamoto y Ryuhei Kitamura
+        </label>
+        <input
+          id="director1-field"
+          type="radio"
+          name="director"
+          value="Shigeru Miyamoto y Ryuhei Kitamura"
+        />
 
-    <link rel="stylesheet" href="styles.css">
-    <script defer src="scripts.js"></script>
-</head>
-<body>
-    
-</body>
+        <label class="label2" for="director2-field"
+          >Shigeru Miyamoto y Takashi Tezuka
+        </label>
+        <input
+          id="director2-field"
+          type="radio"
+          name="director"
+          value="Shigeru Miyamoto y Takashi Tezuka"
+        />
+
+        <label class="label3" for="director3-field"
+          >Shigeru Miyamoto y Takashi Miike
+        </label>
+        <input
+          id="director3-field"
+          type="radio"
+          name="director"
+          value="Shigeru Miyamoto y Takashi Miike"
+        />
+
+        <label class="label4" for="director4-field"
+          >Shigeru Miyamoto y Tomonobu Itagaki
+        </label>
+        <input
+          id="director4-field"
+          type="radio"
+          name="director"
+          value="Shigeru Miyamoto y Tomonobu Itagaki"
+        />
+      </fieldset>
+      <br />
+      <!-- Segunda Pregunta -->
+      <fieldset class="questwrap">
+        <legend class="questtitle">
+          Pregunta 2: <br> ¿En qué año se lanzó el primer The Legend of Zelda en América?
+        </legend>
+        <label class="label1" for="date1-field">1986 </label>
+        <input id="date1-field" type="radio" name="date" value="1986" />
+
+        <label class="label2" for="date2-field">1985 </label>
+        <input id="date2-field" type="radio" name="date" value="1985" />
+
+        <label class="label3" for="date3-field">1988 </label>
+        <input id="date3-field" type="radio" name="date" value="1988" />
+
+        <label class="label4" for="date4-field">1987 </label>
+        <input id="date4-field" type="radio" name="date" value="1987" />
+      </fieldset>
+      <br />
+      <!-- Tercera Pregunta -->
+      <fieldset class="questwrap">
+        <legend class="questtitle">
+          Pregunta 3: <br> ¿Cuál fue la inspiración de Shigeru Miyamoto para crear la historia de
+          The Legend of Zelda?
+        </legend>
+        <label class="label1" for="inspiration1-field"
+          >Sus propias aventuras
+        </label>
+        <input
+          id="inspiration1-field"
+          type="radio"
+          name="inspiration"
+          value="Sus propias aventuras"
+        />
+
+        <label class="label2" for="inspiration2-field"
+          >Las aventuras de Peter Pan
+        </label>
+        <input
+          id="inspiration2-field"
+          type="radio"
+          name="inspiration"
+          value="Las aventuras de Peter Pan"
+        />
+
+        <label class="label3" for="inspiration3-field"
+          >Las aventuras de Robin Hood
+        </label>
+        <input
+          id="inspiration3-field"
+          type="radio"
+          name="inspiration"
+          value="Las aventuras de Robin Hood"
+        />
+
+        <label class="label4" for="inspiration4-field"
+          >Las aventuras de sus hijos
+        </label>
+        <input
+          id="inspiration4-field"
+          type="radio"
+          name="inspiration"
+          value="Las aventuras de sus hijos
+        "
+        />
+      </fieldset>
+      <br />
+      <!-- Cuarta Pregunta -->
+      <fieldset class="questwrap">
+        <legend class="questtitle">
+          Pregunta 4: <br> ¿Qué representa cada pieza de la Trifuerza?
+        </legend>
+        <label class="label1" for="triforce1-field"
+          >Valentía, magia y fuerza
+        </label>
+        <input
+          id="triforce1-field"
+          type="radio"
+          name="triforce"
+          value="Valentía, magia y fuerza
+        "
+        />
+
+        <label class="label2" for="triforce2-field"
+          >Valentía, poder y coraje
+        </label>
+        <input
+          id="triforce2-field"
+          type="radio"
+          name="triforce"
+          value="Valentía, poder y coraje
+        "
+        />
+
+        <label class="label3" for="triforce3-field"
+          >Poder, sabiduría y coraje
+        </label>
+        <input
+          id="triforce3-field"
+          type="radio"
+          name="triforce"
+          value="Poder, sabiduría y coraje
+        "
+        />
+
+        <label class="label4" for="triforce4-field"
+          >Poder, magia y fuerza
+        </label>
+        <input
+          id="triforce4-field"
+          type="radio"
+          name="triforce"
+          value="Poder, magia y fuerza
+        "
+        />
+      </fieldset>
+      <br />
+      <!-- Quinta Pregunta -->
+      <fieldset class="questwrap">
+        <legend class="questtitle">
+          Pregunta 5: <br> ¿Cuál de estos templos es inexistente n Ocarina of Time?
+        </legend>
+        <label class="label1" for="temple1-field">El templo del Tiempo </label>
+        <input
+          id="temple1-field"
+          type="radio"
+          name="temple"
+          value="El templo del Tiempo
+        "
+        />
+
+        <label class="label2" for="temple2-field">El templo de la Luz </label>
+        <input
+          id="temple2-field"
+          type="radio"
+          name="temple"
+          value="El templo de la Luz
+        "
+        />
+
+        <label class="label3" for="temple3-field"
+          >El templo de las Sombras
+        </label>
+        <input
+          id="temple-field"
+          type="radio"
+          name="temple"
+          value="El templo de las Sombras
+        "
+        />
+
+        <label class="label4" for="temple4-field">El templo del Bosque </label>
+        <input
+          id="temple4-field"
+          type="radio"
+          name="temple"
+          value="El templo del Bosque
+        "
+        />
+      </fieldset>
+      <br />
+      <!-- Submit Button -->
+      <button class="submit" type="submit">Comprobar Quiz</button>
+    </form>
+  </body>
 </html>
