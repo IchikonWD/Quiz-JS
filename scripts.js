@@ -6,4 +6,4 @@ const respuestas = {
   temple: "El templo de la Luz",
 };
 
-// document.querySelector('body').innerHTML = 'Holi!'
+// document.querySelector('body').innerHTML = 'Holi!'\

@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -7,6 +8,7 @@
 body {
   font-size: 14px;
   color: #333;
+  background-color: black;
 }
 
 input[type="radio"] {
@@ -15,56 +17,79 @@ input[type="radio"] {
 
 .zeldaform {
   width: 100%;
+  height: 100vh;
 }
 
 .questwrap {
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
+  flex: 1;
   justify-content: space-evenly;
-  background-color: black;
+  background-color: palegoldenrod;
   width: 100%;
-  height: 100vh;
+  height: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 .questtitle {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 1.5em;
+  font-family: "Indie Flower", cursive;
+  font-size: 2em;
   font-weight: bold;
-  background-color: white;
+  background-color: palegoldenrod;
   width: 100%;
+  height: 6em;
+  text-align: center;
+  margin: 0;
+  padding-top: 3em;
 }
 
 label {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #333;
+  color: #fff;
   font-size: 1.3em;
   font-weight: bold;
   width: 100%;
   height: 100%;
+  flex: 1;
+  box-sizing: border-box;
 }
 
 .label1 {
-  background-color: palevioletred;
+  background-color: #06d6a0;
+}
+.label1:hover {
+  background-color: #05be8d;
 }
 
 .label2 {
-  background-color: palegreen;
+  background-color: #1b9aaa;
+}
+.label2:hover {
+  background-color: #188796;
 }
 
 .label3 {
-  background-color: paleturquoise;
+  background-color: #ef476f;
+}
+.label3:hover {
+  background-color: #d63e62;
 }
 
 .label4 {
-  background-color: palegoldenrod;
+  background-color: #ffc43d;
+}
+.label4:hover {
+  background-color: #e0ad34;
 }
 
 button {
   font-size: 1.5em;
   font-weight: bold;
-  background-color: goldenrod;
+  background-color: #ffc43d;
   width: 100%;
   height: 100vh;
 }
@@ -73,10 +98,72 @@ button:hover {
   background-color: gold;
 }
 
-/* Tablet Breakpoint */
-@media screen and (min-width: 768px) {
+/* ScrollBar */
+::-webkit-scrollbar {
+  width: 10px;
 }
 
+::-webkit-scrollbar-track {
+  background: black;
+}
+
+::-webkit-scrollbar-thumb {
+  background: goldenrod;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: gold;
+}
+/* End ScrollBar */
+
+/* Tablet Breakpoint */
+@media screen and (min-width: 768px) {
+  .questwrap {
+    flex-direction: row;
+    margin-bottom: -1.5em;
+  }
+
+  .questtitle {
+    font-size: 2.5em;
+  }
+
+  label {
+    font-size: 1.5em;
+    flex-basis: 40%;
+    height: 30%;
+    width: 35%;
+    margin: 0 1.8em 0 1.8em;
+    border-radius: 0.4em;
+  }
+
+  button {
+    justify-content: center;
+    align-items: center;
+    height: 3em;
+    border-radius: 0em 0em 2em 2em;
+  }
+}
 /* Desktop Breakpoint */
 @media screen and (min-width: 1366px) {
+  .questtitle {
+    font-size: 3em;
+  }
+
+  .questwrap {
+    margin-bottom: -1.14em;
+  }
+
+  label {
+    font-size: 1.5em;
+    height: 35%;
+    margin: 0 2em 0 2em;
+    border-radius: 1em;
+  }
+
+  button {
+    justify-content: center;
+    align-items: center;
+    height: 3em;
+    border-radius: 0em 0em 2em 2em;
+  }
 }

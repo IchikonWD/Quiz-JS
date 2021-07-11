@@ -5,6 +5,24 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="author" content="Ezequiel Migueles" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./assets/img/favicon/favicon-16x16.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/img/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="96x96"
+      href="./assets/img/favicon/favicon-96x96.png"
+    />
     <link rel="stylesheet" href="./styles.css" />
     <script defer src="./scripts.js"></script>
     <title>The Legend Of Zelda Quiz</title>
@@ -13,12 +31,14 @@
   <body>
     <form class="zeldaform" name="zelda">
       <!-- Primera Pregunta -->
-      <fieldset class="questwrap">
+      <fieldset id="question1" class="questwrap">
         <legend class="questtitle">
-          Pregunta 1: <br> ¿Quiénes son los directores del primer The Legend of Zelda?
+          ¿Quiénes son los directores del primer <br />
+          The Legend of Zelda?
         </legend>
         <label class="label1" for="director1-field"
-          >Shigeru Miyamoto y Ryuhei Kitamura
+          >Shigeru Miyamoto <br />
+          y Ryuhei Kitamura
         </label>
         <input
           id="director1-field"
@@ -28,7 +48,8 @@
         />
 
         <label class="label2" for="director2-field"
-          >Shigeru Miyamoto y Takashi Tezuka
+          >Shigeru Miyamoto <br />
+          y Takashi Tezuka
         </label>
         <input
           id="director2-field"
@@ -38,7 +59,8 @@
         />
 
         <label class="label3" for="director3-field"
-          >Shigeru Miyamoto y Takashi Miike
+          >Shigeru Miyamoto <br />
+          y Takashi Miike
         </label>
         <input
           id="director3-field"
@@ -48,7 +70,8 @@
         />
 
         <label class="label4" for="director4-field"
-          >Shigeru Miyamoto y Tomonobu Itagaki
+          >Shigeru Miyamoto <br />
+          y Tomonobu Itagaki
         </label>
         <input
           id="director4-field"
@@ -59,9 +82,10 @@
       </fieldset>
       <br />
       <!-- Segunda Pregunta -->
-      <fieldset class="questwrap">
+      <fieldset id="question2" class="questwrap">
         <legend class="questtitle">
-          Pregunta 2: <br> ¿En qué año se lanzó el primer The Legend of Zelda en América?
+          ¿En qué año se lanzó en América el primer <br />
+          The Legend of Zelda?
         </legend>
         <label class="label1" for="date1-field">1986 </label>
         <input id="date1-field" type="radio" name="date" value="1986" />
@@ -77,9 +101,9 @@
       </fieldset>
       <br />
       <!-- Tercera Pregunta -->
-      <fieldset class="questwrap">
+      <fieldset id="question3" class="questwrap">
         <legend class="questtitle">
-          Pregunta 3: <br> ¿Cuál fue la inspiración de Shigeru Miyamoto para crear la historia de
+          ¿Cuál fue la inspiración de Shigeru Miyamoto para crear la historia de
           The Legend of Zelda?
         </legend>
         <label class="label1" for="inspiration1-field"
@@ -125,9 +149,9 @@
       </fieldset>
       <br />
       <!-- Cuarta Pregunta -->
-      <fieldset class="questwrap">
+      <fieldset id="question4" class="questwrap">
         <legend class="questtitle">
-          Pregunta 4: <br> ¿Qué representa cada pieza de la Trifuerza?
+          ¿Qué representa cada pieza de la Trifuerza?
         </legend>
         <label class="label1" for="triforce1-field"
           >Valentía, magia y fuerza
@@ -175,9 +199,10 @@
       </fieldset>
       <br />
       <!-- Quinta Pregunta -->
-      <fieldset class="questwrap">
+      <fieldset id="question4" class="questwrap">
         <legend class="questtitle">
-          Pregunta 5: <br> ¿Cuál de estos templos es inexistente n Ocarina of Time?
+          ¿Cuál de estos templos es inexistente en <br />
+          Ocarina of Time?
         </legend>
         <label class="label1" for="temple1-field">El templo del Tiempo </label>
         <input

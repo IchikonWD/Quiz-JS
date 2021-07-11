@@ -1,2 +1,2 @@
 # Quiz-JS
-Quiz JS Exercise - The Bridge Bootcamp
+Responsive Quiz JS Exercise - The Bridge Bootcamp
