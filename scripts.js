@@ -1,4 +1,4 @@
-//? Objeto que almacena las answers de cada pregunta
+//? Objeto que almacena las respuestas de cada pregunta
 
 const answers = {
   director: "Shigeru Miyamoto y Takashi Tezuka",
@@ -7,6 +7,36 @@ const answers = {
   triforce: "Poder, sabiduría y coraje",
   temple: "El templo de la Luz",
 };
+
+//? Funcion para cambiar el texto del boton de inicio
+
+const cambiarBoton = () => {
+  var boton = document.querySelector(".start");
+  boton.innerHTML = "¡Sigue jugando!";
+};
+
+//? Funcion para ocultar el mensaje de error con boton de cerrar
+
+const fade = () => {
+  var close = document.querySelector(".closebtn");
+  close.addEventListener("click", function () {
+    setTimeout(function () {
+      showAlert();
+    }, 300);
+  });
+};
+fade();
+
+//? Funcion para ocultar y mostrar el mensaje de error
+
+function showAlert() {
+  var x = document.querySelector(".alert");
+  if (x.style.visibility === "visible") {
+    x.style.visibility = "hidden";
+  } else {
+    x.style.visibility = "visible";
+  }
+}
 
 const form = document.querySelector('form[name="zeldaform"]');
 
@@ -59,15 +89,17 @@ form.addEventListener("submit", (event) => {
     console.log("\n");
     console.log("Las respuestas correctas eran:");
     console.log(answer);
-    event.target.submit();
   } else if (validateForm() === false) {
     console.log("No has respondido a todas las preguntas");
   } else {
     console.log("No eran las respuestas correctas");
-    document.querySelector("fieldset").scrollIntoView({
+    showAlert();
+    cambiarBoton();
+    document.querySelector(".greeting").scrollIntoView({
       behavior: "smooth",
     });
   }
+  // event.target.submit();
 });
 
 //? Funcion que mueve a la primera pregunta desde el inicio.
