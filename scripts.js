@@ -1,4 +1,4 @@
-// Objeto que almacena las answers de cada pregunta
+//? Objeto que almacena las answers de cada pregunta
 
 const answers = {
   director: "Shigeru Miyamoto y Takashi Tezuka",
@@ -9,7 +9,8 @@ const answers = {
 };
 
 const form = document.querySelector('form[name="zeldaform"]');
-// Funcion que valida que se haya seleccionado una opcion de cada pregunta
+
+//? Funcion que valida que se haya seleccionado una opcion de cada pregunta
 
 function validateForm() {
   let inputs = document.querySelectorAll('input[type="radio"]');
@@ -27,7 +28,7 @@ function validateForm() {
   }
 }
 
-// Comprobacion de answers
+//? Comprobacion de answers
 
 form.addEventListener("submit", (event) => {
   event.preventDefault();
@@ -63,8 +64,36 @@ form.addEventListener("submit", (event) => {
     console.log("No has respondido a todas las preguntas");
   } else {
     console.log("No eran las respuestas correctas");
+    document.querySelector("fieldset").scrollIntoView({
+      behavior: "smooth",
+    });
   }
 });
 
+//? Funcion que mueve a la primera pregunta desde el inicio.
 
-// TODO: Añadir efectos de animacion a la respuesta correcta e incorrecta
+let scrollToFirstQuestion = document.querySelector(".start");
+scrollToFirstQuestion.addEventListener("click", () => {
+  document.querySelector("fieldset").scrollIntoView({
+    behavior: "smooth",
+  });
+});
+
+//? Funcion desplaza la ventana hacia la siguiente pregunta con scrolls
+
+let fieldset = document.querySelectorAll("fieldset");
+for (let i = 0; i < fieldset.length; i++) {
+  fieldset[i].addEventListener("click", () => {
+    if (i < fieldset.length - 1) {
+      document.querySelectorAll("fieldset")[i + 1].scrollIntoView({
+        behavior: "smooth",
+      });
+    } else {
+      document.querySelector(".submit").scrollIntoView({
+        behavior: "smooth",
+      });
+    }
+  });
+}
+
+//TODO: Añadir efectos de animacion a la respuesta correcta e incorrecta
