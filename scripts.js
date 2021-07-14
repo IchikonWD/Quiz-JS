@@ -10,14 +10,19 @@ const answers = {
 
 //? Funcion que selecciona los labels de las respuestas seleccionadas
 
+//TODO FIX SELECTOR CON UN IF
+
 function selectLinkedLabel() {
   const selected = document.querySelectorAll("input[type='radio']:checked");
+  const unselected = document.querySelectorAll("input[type='radio']");
   for (let i = 0; i < selected.length; i++) {
-    selected[i].parentNode
-      .querySelector("label")
-      .classList.add("selectedR");
+    const label = selected[i].nextElementSibling;
+    const unlabel = unselected[i].nextElementSibling;
+    unlabel.classList.remove("selected");
+    label.classList.add("selected");
   }
 }
+
 // TODO : Añadir cambio de colores a respuestas correctas y incorrectas
 
 //? Funcion para cambiar el texto del boton de inicio
@@ -74,6 +79,7 @@ function validateForm() {
 
 form.addEventListener("submit", (event) => {
   event.preventDefault();
+  selectLinkedLabel();
 
   const director = event.target.elements.director.value;
   const date = event.target.elements.date.value;
@@ -101,7 +107,6 @@ form.addEventListener("submit", (event) => {
     console.log("\n");
     console.log("Las respuestas correctas eran:");
     console.log(answer);
-    //TODO: Añadir efectos de animacion a la respuesta correcta e incorrecta
   } else if (validateForm() === false) {
     console.log("No has respondido a todas las preguntas");
   } else {
@@ -112,8 +117,9 @@ form.addEventListener("submit", (event) => {
       behavior: "smooth",
     });
   }
-  // event.target.submit();
 });
+
+// event.target.submit();
 
 //? Funcion que mueve a la primera pregunta desde el inicio.
 
@@ -140,3 +146,14 @@ for (let i = 0; i < fieldset.length; i++) {
     }
   });
 }
+
+//TODO: Añadir efectos de animacion a la respuesta correcta e incorrecta
+
+// const correct = Object.keys(answers).every(function (key) {
+//   return answer[key] === answers[key];
+// });
+// if (correct) {
+//   document.querySelector(".selected").classList.add("correct");
+// } else {
+//   document.querySelector(".selected").classList.add("incorrect");
+// }

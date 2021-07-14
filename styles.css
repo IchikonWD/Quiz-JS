@@ -144,8 +144,35 @@ label {
 }
 
 .selectedR {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 1.3em;
+  font-weight: bold;
+  width: 100%;
+  height: 100%;
+  flex: 1;
+  box-sizing: border-box;
+  cursor: pointer;
   border: 0.4em solid #f44336;
 }
+
+.selectedG {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 1.3em;
+  font-weight: bold;
+  width: 100%;
+  height: 100%;
+  flex: 1;
+  box-sizing: border-box;
+  cursor: pointer;
+  border: 0.4em solid greenyellow;
+}
+
 
 .label1 {
   background-color: #06d6a0;
