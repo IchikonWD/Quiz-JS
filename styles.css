@@ -143,6 +143,10 @@ label {
   cursor: pointer;
 }
 
+.selectedR {
+  border: 0.4em solid #f44336;
+}
+
 .label1 {
   background-color: #06d6a0;
 }

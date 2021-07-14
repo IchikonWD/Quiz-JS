@@ -8,11 +8,23 @@ const answers = {
   temple: "El templo de la Luz",
 };
 
+//? Funcion que selecciona los labels de las respuestas seleccionadas
+
+function selectLinkedLabel() {
+  const selected = document.querySelectorAll("input[type='radio']:checked");
+  for (let i = 0; i < selected.length; i++) {
+    selected[i].parentNode
+      .querySelector("label")
+      .classList.add("selectedR");
+  }
+}
+// TODO : Añadir cambio de colores a respuestas correctas y incorrectas
+
 //? Funcion para cambiar el texto del boton de inicio
 
 const cambiarBoton = () => {
   var boton = document.querySelector(".start");
-  boton.innerHTML = "¡Sigue jugando!";
+  boton.innerHTML = "Otro intento";
 };
 
 //? Funcion para ocultar el mensaje de error con boton de cerrar
@@ -89,6 +101,7 @@ form.addEventListener("submit", (event) => {
     console.log("\n");
     console.log("Las respuestas correctas eran:");
     console.log(answer);
+    //TODO: Añadir efectos de animacion a la respuesta correcta e incorrecta
   } else if (validateForm() === false) {
     console.log("No has respondido a todas las preguntas");
   } else {
@@ -127,5 +140,3 @@ for (let i = 0; i < fieldset.length; i++) {
     }
   });
 }
-
-//TODO: Añadir efectos de animacion a la respuesta correcta e incorrecta
